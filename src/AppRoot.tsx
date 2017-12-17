@@ -1,22 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-interface Props {}
+interface IProps {}
 
-interface State {
-  name: string
+interface IState {
+  name: string;
 }
 
-export default class App extends React.Component<Props, State> {
-  state = {
-    name: "Felix"
-  }
+export default class App extends React.Component<IProps, IState> {
+  public state = {
+    name: "Felix",
+  };
 
-  render() {
+  public render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
-          Welcome {this.state.name}! How are you?
+          Welcome {this.state.name}! How are you feeling today?
         </Text>
       </View>
     );
@@ -25,14 +25,14 @@ export default class App extends React.Component<Props, State> {
 
 const styles = StyleSheet.create({
     container: {
+        alignItems: "center",
+        backgroundColor: "#F5FCFF",
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        justifyContent: "center",
     },
     text: {
         fontSize: 20,
-        textAlign: 'center',
         margin: 10,
+        textAlign: "center",
     },
 });

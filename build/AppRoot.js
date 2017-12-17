@@ -1,31 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 export default class App extends React.Component {
     constructor() {
         super(...arguments);
         this.state = {
-            name: "Felix"
+            name: "Felix",
         };
     }
     render() {
         return (<View style={styles.container}>
         <Text style={styles.text}>
-          Welcome {this.state.name}! How are you?
+          Welcome {this.state.name}! How are you feeling today?
         </Text>
       </View>);
     }
 }
 const styles = StyleSheet.create({
     container: {
+        alignItems: "center",
+        backgroundColor: "#F5FCFF",
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        justifyContent: "center",
     },
     text: {
         fontSize: 20,
-        textAlign: 'center',
         margin: 10,
+        textAlign: "center",
     },
 });
 //# sourceMappingURL=AppRoot.js.map
