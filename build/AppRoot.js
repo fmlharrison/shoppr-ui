@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-export default class App extends React.Component {
+class AppRoot extends React.Component {
     constructor() {
         super(...arguments);
         this.state = {
@@ -15,6 +15,7 @@ export default class App extends React.Component {
       </View>);
     }
 }
+export default AppRoot;
 const styles = StyleSheet.create({
     container: {
         alignItems: "center",

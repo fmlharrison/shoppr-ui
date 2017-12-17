@@ -17,11 +17,42 @@
     "tslint": "tslint -c tslint.json 'src/**/*.tsx'"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation))"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "android.ts",
+      "android.tsx"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-expo"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "transform-react-jsx-source"
+        ]
+      }
+    }
   },
   "dependencies": {
+    "@types/jest": "^21.1.8",
     "@types/react": "^16.0.27",
     "@types/react-native": "^0.50.8",
+    "@types/react-test-renderer": "^16.0.0",
     "expo": "^23.0.4",
     "react": "16.0.0",
     "react-native": "0.50.3",
@@ -29,6 +60,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "ts-jest": "^21.2.4",
     "typescript": "^2.6.2"
   }
 }

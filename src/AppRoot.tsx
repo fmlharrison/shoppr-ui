@@ -7,7 +7,7 @@ interface IState {
   name: string;
 }
 
-export default class App extends React.Component<IProps, IState> {
+ class AppRoot extends React.Component<IProps, IState> {
   public state = {
     name: "Felix",
   };
@@ -22,6 +22,8 @@ export default class App extends React.Component<IProps, IState> {
     );
   }
 }
+
+export default AppRoot;
 
 const styles = StyleSheet.create({
     container: {
