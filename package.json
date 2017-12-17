@@ -5,6 +5,7 @@
   "devDependencies": {
     "jest-expo": "23.0.0",
     "react-native-scripts": "1.8.1",
+    "react-native-typescript-transformer": "^1.1.4",
     "react-test-renderer": "16.0.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -38,7 +39,8 @@
   },
   "babel": {
     "presets": [
-      "babel-preset-expo"
+      "babel-preset-expo",
+      "react-native"
     ],
     "env": {
       "development": {

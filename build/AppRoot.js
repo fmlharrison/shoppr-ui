@@ -5,12 +5,14 @@ class AppRoot extends React.Component {
         super(...arguments);
         this.state = {
             name: "Felix",
+            emotion: "happy"
         };
     }
     render() {
         return (<View style={styles.container}>
         <Text style={styles.text}>
-          Welcome {this.state.name}! How are you feeling today?
+          Welcome {this.state.name}! 
+          Are you feeling {this.state.emotion} today?
         </Text>
       </View>);
     }

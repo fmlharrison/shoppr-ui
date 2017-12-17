@@ -1,9 +1,8 @@
 import "react-native";
 import React from "react";
 import AppRoot from "../AppRoot";
-import { create } from "react-test-renderer";
-test("renders correctly", () => {
-    const tree = create(<AppRoot />).toJSON();
-    expect(tree).toMatchSnapshot();
+import renderer from "react-test-renderer";
+test("AppRoot renders correctly", () => {
+    expect(renderer.create(<AppRoot />)).toMatchSnapshot();
 });
 //# sourceMappingURL=AppRoot-test.js.map

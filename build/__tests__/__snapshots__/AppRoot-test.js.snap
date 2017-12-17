@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`AppRoot renders correctly 1`] = `
 <View
   style={
     Object {
@@ -25,7 +25,9 @@ exports[`renders correctly 1`] = `
   >
     Welcome 
     Felix
-    ! How are you feeling today?
+    ! Are you feeling 
+    happy
+     today?
   </Text>
 </View>
 `;

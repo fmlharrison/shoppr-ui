@@ -5,18 +5,21 @@ interface IProps {}
 
 interface IState {
   name: string;
+  emotion: string;
 }
 
- class AppRoot extends React.Component<IProps, IState> {
+class AppRoot extends React.Component<IProps, IState> {
   public state = {
     name: "Felix",
+    emotion: "happy"
   };
 
   public render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
-          Welcome {this.state.name}! How are you feeling today?
+          Welcome {this.state.name}! 
+          Are you feeling {this.state.emotion} today?
         </Text>
       </View>
     );
