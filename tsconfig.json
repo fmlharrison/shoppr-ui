@@ -1,4 +1,5 @@
 {
+  "compileOnSave": true,
     "compilerOptions": {
       "target": "es2015",
       "module": "es2015",
@@ -11,7 +12,8 @@
       "preserveConstEnums": true,
       "allowJs": true,
       "sourceMap": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+      "watch": true
     },
     "exclude": [
       "App.js",
@@ -21,6 +23,5 @@
       "build",
       "node_modules",
       "__tests__"
-    ],
-    "compileOnSave": true
+    ]
   }

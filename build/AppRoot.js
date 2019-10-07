@@ -1,19 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
+var shoppingCart = require("../public/images/Shopping-Cart-Icon.png");
 class AppRoot extends React.Component {
     constructor() {
         super(...arguments);
         this.state = {
-            name: "Felix",
-            emotion: "happy"
+            name: "Harry",
+            emotion: "angry"
         };
     }
     render() {
         return (<View style={styles.container}>
-        <Text style={styles.text}>
-          Welcome {this.state.name}! 
-          Are you feeling {this.state.emotion} today?
-        </Text>
+        <Image source={shoppingCart} style={styles.image}/>
       </View>);
     }
 }
@@ -29,6 +27,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
         margin: 10,
         textAlign: "center",
+    },
+    image: {
+        width: 200,
+        height: 200,
     },
 });
 //# sourceMappingURL=AppRoot.js.map
